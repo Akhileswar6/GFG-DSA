@@ -2,13 +2,13 @@
 
 class Solution:
     def rotateArr(self, arr, d):
-        n = len(arr)
+        n = len(arr)        # gets the length of the array
         
-        d %= n
+        d %= n              # handles cases where d is greater than n
         
-        reverse(arr, 0, d - 1)
-        reverse(arr, d, n - 1)
-        reverse(arr, 0, n - 1)
+        reverse(arr, 0, d - 1)    # Reverses the first d elements
+        reverse(arr, d, n - 1)    # Reverses the remaining n-d elements
+        reverse(arr, 0, n - 1)    # Reverses the entire array to get the final rotated array
         
         
 def reverse(arr, start, end):
