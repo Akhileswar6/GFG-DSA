@@ -4,21 +4,21 @@ class Solution:
     def maxProduct(self, arr):
         n = len(arr)
         
-        currMax = arr[0]
+        currMax = arr[0]            # Tracks the maximum product ending at the current position
         
-        currMin = arr[0]
+        currMin = arr[0]            # Tracks the minimum product ending at the current position (to handle negative numbers)
         
-        maxProd = arr[0]
+        maxProd = arr[0]            # Initialize maxProd with the first element
         
-        for i in range(1, n):
+        for i in range(1, n):       # iterate through the array starting from the second element
             
-            temp = max(arr[i], arr[i] * currMax, arr[i] * currMin)
+            temp = max(arr[i], arr[i] * currMax, arr[i] * currMin)                  # Calculate the maximum product ending at the current position
             
-            currMin = min(arr[i], arr[i] * currMax, arr[i] * currMin)
+            currMin = min(arr[i], arr[i] * currMax, arr[i] * currMin)            # Calculate the minimum product ending at the current position
             
-            currMax = temp
+            currMax = temp                        # Update currMax with the calculated maximum
             
-            maxProd = max(maxProd, currMax)
+            maxProd = max(maxProd, currMax)       # Update maxProd with the maximum product found so far
        
         return maxProd
 
