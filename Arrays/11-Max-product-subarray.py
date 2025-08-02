@@ -24,3 +24,4 @@ class Solution:
 
 s = Solution()
 print(s.maxProduct([2,8,-9,0,3,-2,8]))
+# Output: 144 (subarray [2, 8, -9, 0, 3, -2, 8] has the maximum product)
