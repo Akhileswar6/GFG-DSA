@@ -16,4 +16,5 @@ arr = [0, 5, 0, 2, 0, 7, 0, 1]
 Solution().pushZerosToEnd(arr)
 print(arr)
 
+# Output: [5, 2, 7, 1, 0, 0, 0, 0] (all zeros moved to the end)
 
